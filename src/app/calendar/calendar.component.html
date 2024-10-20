@@ -1,0 +1,11 @@
+<div class="calendar-background">
+    <!-- Your events or other content can go here -->
+    <div class="event" style="top: 60px; height: 100px;">Event 1</div>
+    <div class="event" style="top: 240px; height: 60px;">Event 2</div>
+    <div class="event" style="top: 270px; height: 60px; left:250px">Event 3</div>
+
+
+    @for (time of times; track time; let idx = $index, e = $even) {
+        <div class="time-label" [ngStyle]="{ top: time.top + 'px' }">{{ time.label }}</div>
+    }
+</div>
